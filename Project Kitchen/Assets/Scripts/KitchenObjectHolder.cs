@@ -12,7 +12,7 @@ public class KitchenObjectHolder : MonoBehaviour
         return kitchenObject;
     }
 
-    public bool isHaveKitchenObject()
+    public bool IsHaveKitchenObject()
     {
         return kitchenObject != null;
     }
@@ -53,5 +53,15 @@ public class KitchenObjectHolder : MonoBehaviour
     public void ClearKitchenObject()
     {
         this.kitchenObject = null;
+    }
+    public void DestroyKitchenObject()
+    {
+        Destroy(kitchenObject.gameObject);
+        ClearKitchenObject();
+    }
+    public void CreateKitchenObject(GameObject kitchenObjectPrefab)
+    {
+        KitchenObject kitchenObject = GameObject.Instantiate(kitchenObjectPrefab, GetHoldPoint()).GetComponent<KitchenObject>();
+        SetKitchenObject(kitchenObject);
     }
 }

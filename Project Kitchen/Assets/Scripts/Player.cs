@@ -19,15 +19,16 @@ public class Player : KitchenObjectHolder
         Instance = this;
     }
 
-    private void Update()
-    {
-        HandleInteraction();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         gameInput.OnInterAction += GameInput_OnInterAction;
+        gameInput.OnOperateAction += GameInput_OnOperateAction;
+    }
+
+    private void Update()
+    {
+        HandleInteraction();
     }
 
     // Update is called once per frame
@@ -47,6 +48,11 @@ public class Player : KitchenObjectHolder
     private void GameInput_OnInterAction(object sender, System.EventArgs e)
     {
         selectedCounter?.Interact(this);
+    }
+
+    private void GameInput_OnOperateAction(object sender, System.EventArgs e)
+    {
+        selectedCounter?.InteractOperate(this);
     }
 
     private void HandleMovement()

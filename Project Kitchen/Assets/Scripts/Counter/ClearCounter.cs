@@ -10,9 +10,9 @@ public class ClearCounter : BaseCounter
 
     public override void Interact(Player player)
     {
-        if (player.isHaveKitchenObject())
+        if (player.IsHaveKitchenObject())
         {
-            if (isHaveKitchenObject()== false)
+            if (IsHaveKitchenObject()== false)
             {
                 TransferKitchenObject(player,this);
             } else 
@@ -21,7 +21,7 @@ public class ClearCounter : BaseCounter
             }
         } else 
         {
-            if (isHaveKitchenObject() == false)
+            if (IsHaveKitchenObject() == false)
             {
 
             } else 
@@ -29,9 +29,7 @@ public class ClearCounter : BaseCounter
                 TransferKitchenObject(this,player);
 
             }
-        }
-        
-        
+        }  
     }
 
 
