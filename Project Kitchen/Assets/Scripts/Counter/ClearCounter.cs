@@ -5,39 +5,42 @@ using UnityEngine.UI;
 
 public class ClearCounter : BaseCounter
 {
-    
+
 
 
     public override void Interact(Player player)
     {
-        if (player.isHaveKitchenObject())
+        if (player.IsHaveKitchenObject())
         {
-            if (isHaveKitchenObject()== false)
+            if (IsHaveKitchenObject() == false)
             {
-                TransferKitchenObject(player,this);
-            } else 
-            {
-
+                TransferKitchenObject(player, this);
             }
-        } else 
-        {
-            if (isHaveKitchenObject() == false)
+            else
             {
-
-            } else 
-            {
-                TransferKitchenObject(this,player);
 
             }
         }
-        
-        
+        else
+        {
+            if (IsHaveKitchenObject() == false)
+            {
+
+            }
+            else
+            {
+                TransferKitchenObject(this, player);
+
+            }
+        }
+
+
     }
 
 
 
-    
 
-    
+
+
 
 }

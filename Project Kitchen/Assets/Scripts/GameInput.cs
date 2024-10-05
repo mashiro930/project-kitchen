@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class GameInput : MonoBehaviour
 {
-    public event EventHandler OnInterAction;
-    
+
+    public event EventHandler OnInteractAction;
+    public event EventHandler OnOperateAction;
+
     private GameControl gameControl;
 
     private void Awake()
@@ -15,11 +17,17 @@ public class GameInput : MonoBehaviour
         gameControl.Player.Enable();
 
         gameControl.Player.Interact.performed += Interact_Performed;
+        gameControl.Player.Operate.performed += OperateAction_Performed;
     }
 
     private void Interact_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        OnInterAction?.Invoke(this, EventArgs.Empty);
+        OnInteractAction?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void OperateAction_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnOperateAction?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector3 GetMovementDirectionNormalized()

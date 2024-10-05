@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : KitchenObjectHolder
 {
-    public static Player Instance {  get; private set; }
+    public static Player Instance { get; private set; }
 
     [SerializeField] private float moveSpeed = 7;
     [SerializeField] private float rotateSpeed = 10;
@@ -18,22 +18,20 @@ public class Player : KitchenObjectHolder
     {
         Instance = this;
     }
+    private void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+        gameInput.OnOperateAction += GameInput_OnOperateAction;
+    }
 
     private void Update()
     {
         HandleInteraction();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-        gameInput.OnInterAction += GameInput_OnInterAction;
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        HandleMovement();       
+        HandleMovement();
     }
 
     public bool IsWalking
@@ -44,9 +42,14 @@ public class Player : KitchenObjectHolder
         }
     }
 
-    private void GameInput_OnInterAction(object sender, System.EventArgs e)
+    private void GameInput_OnInteractAction(object sender, System.EventArgs e)
     {
         selectedCounter?.Interact(this);
+    }
+
+    private void GameInput_OnOperateAction(object sender, System.EventArgs e)
+    {
+        selectedCounter?.InteractOperate(this);
     }
 
     private void HandleMovement()
@@ -60,22 +63,20 @@ public class Player : KitchenObjectHolder
         if (direction != Vector3.zero)
         {
             transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
-            //transform.forward = direction;
         }
-
     }
 
-    private  void HandleInteraction()
+    private void HandleInteraction()
     {
         RaycastHit hitinfo;
         bool isCollide = Physics.Raycast(transform.position, transform.forward, out hitinfo, 2f, counterLayerMask);
-        if(isCollide)
+        if (isCollide)
         {
-            if(hitinfo.transform.TryGetComponent<BaseCounter>(out BaseCounter counter))
+            if (hitinfo.transform.TryGetComponent<BaseCounter>(out BaseCounter counter))
             {
                 //counter.Interact();
                 SetSelectedCounter(counter);
-            } 
+            }
             else
             {
                 SetSelectedCounter(null);
@@ -93,8 +94,8 @@ public class Player : KitchenObjectHolder
         {
             selectedCounter?.CancelSelect();
             counter?.SelectCounter();
+
             this.selectedCounter = counter;
         }
-        
     }
-}  
+}
