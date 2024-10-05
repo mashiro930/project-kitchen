@@ -12,6 +12,7 @@ public class KitchenObjectHolder : MonoBehaviour
 
     private KitchenObject kitchenObject;
 
+    
     public KitchenObject GetKitchenObject()
     {
         return kitchenObject;
