@@ -13,7 +13,7 @@ public class PlatesCounter : BaseCounter
         
         list = new List<KitchenObject>();
     }
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     public override void Interact(Player player)
     {
 
@@ -23,7 +23,7 @@ public class PlatesCounter : BaseCounter
         }
     }
     // Update is called once per frame
-    void Update()
+     void Update()
     {
         if (list.Count < 5)
         {
@@ -32,7 +32,7 @@ public class PlatesCounter : BaseCounter
             {
                 KitchenObject NewOb = GameObject.Instantiate(Plate.prefab, GetHoldPoint()).GetComponent<KitchenObject>();
                 NewOb.transform.localPosition = Vector3.zero + Vector3.up * 0.1f * list.Count;
-                list.Add(NewOb);
+                list.Add(NewOb); 
                 timer = 0;
             }
         }

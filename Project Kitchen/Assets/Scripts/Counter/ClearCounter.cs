@@ -22,7 +22,7 @@ public class ClearCounter : BaseCounter
                 {
                     PlateKitchenObject plateKitchenObject = player.GetKitchenObject().GetComponent<PlateKitchenObject>();
                     if (plateKitchenObject.AddKitchenObjectSO(GetKitchenObjectSO())) {
-                        DestroyKitchenObject();
+                        DestroyKitchenObject();  
                     }
                     
                 }
