@@ -10,9 +10,11 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance { get; private set;}
     
     public event EventHandler OnRecipeSpawned;
+    public event EventHandler OnRecipeSuccessed;
+    public event EventHandler OnRecipeFailed;
+
     [SerializeField] private RecipeListSO recipeSOList;
     [SerializeField] private int orderMaxCount = 5;
-
     [SerializeField] private float orderRate = 2 ;
 
 
@@ -27,9 +29,17 @@ public class OrderManager : MonoBehaviour
         Instance = this;
     }
 
-    public void Start()
+    private void Start()
     {
-        isStartOrder = true;
+        GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
+    }
+
+    private void GameManager_OnStateChanged(object sender, EventArgs e)
+    {
+        if (GameManager.Instance.IsGamePlayingState())
+        {
+            StartSpawnOrder();
+        }
     }
 
     private void Update()
@@ -75,12 +85,14 @@ public class OrderManager : MonoBehaviour
 
         if (correctRecipe == null)
         {
-            print("Failure");
+            print("Order Failure");
+            OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         }
         else
         {
             orderRecipeSoList.Remove(correctRecipe);
-             print("Success"); 
+            OnRecipeSuccessed?.Invoke(this, EventArgs.Empty);
+            print("Order Success"); 
 
         }
 
@@ -105,6 +117,11 @@ public class OrderManager : MonoBehaviour
     public List<RecipeSO> GetOrderList()
     {
         return orderRecipeSoList;
+    }
+
+    public void StartSpawnOrder()
+    {
+        isStartOrder = true;
     }
 
 }
