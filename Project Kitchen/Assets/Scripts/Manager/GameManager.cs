@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     private float waitingToStartTimer = 1;
     private float countDownToStartTimer = 3;
-    private float gamePlayingTimer = 90;
+    private float gamePlayingTimer = 10;
     private float gamePlayingTimeTotal;
     private bool isGamePause = false;
 
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         TurnToWaitingToStart();
+        GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
         
     }
 
