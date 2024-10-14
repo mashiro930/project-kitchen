@@ -20,6 +20,11 @@ public class StoveCounter : BaseCounter
     private FryingReceipe fryingReceipe;
     private float fryingTime = 0;
     private StoveState state = StoveState.Idle;
+    private WarningControl warningControl;
+    private void Start()
+    {
+        warningControl = GetComponent<WarningControl>();
+    }
     public override void Interact(Player player)
     {
         if (player.IsHaveKitchenObject())
@@ -81,12 +86,18 @@ public class StoveCounter : BaseCounter
             case StoveState.Burning:
                 fryingTime += Time.deltaTime;
                 progressBarUI.UpdateProgress(fryingTime / fryingReceipe.fryingTimne);
+                float warningTimeNormalize = .5f;
+                if (fryingTime / fryingReceipe.fryingTimne > warningTimeNormalize)
+                {
+                    warningControl.ShowWarning();
+                }
                 if (fryingTime >= fryingReceipe.fryingTimne)
                 {
                     DestroyKitchenObject();
                     CreateKitchenObject(fryingReceipe.output.prefab);
                     TurnToIdle(); 
                 }
+                
                 break;
             default:
                 break; 
@@ -124,6 +135,7 @@ public class StoveCounter : BaseCounter
         state = StoveState.Idle;
         stoveCounterVisual.HideStoveEffect();
         sound.Pause();
+        warningControl.StopWarning();
     }
  
 }

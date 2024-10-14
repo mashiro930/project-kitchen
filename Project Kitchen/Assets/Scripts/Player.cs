@@ -10,8 +10,8 @@ public class Player : KitchenObjectHolder
     [SerializeField] private float rotateSpeed = 10;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask counterLayerMask;
-
-    private bool isWalking = false;
+    public ParticleSystem dirtParticle;
+    public bool isWalking = false;
     private BaseCounter selectedCounter;
 
     private void Awake()
@@ -32,6 +32,8 @@ public class Player : KitchenObjectHolder
     private void FixedUpdate()
     {
         HandleMovement();
+        if (isWalking ) { dirtParticle.Play(); }
+        else { dirtParticle.Stop(); }
     }
 
     public bool IsWalking
