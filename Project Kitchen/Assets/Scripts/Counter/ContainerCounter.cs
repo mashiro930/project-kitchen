@@ -17,7 +17,7 @@ public class ContainerCounter : BaseCounter
         
         TransferKitchenObject(this, player);
 
-        containerCounterVisual.PlayOpen();
+        //containerCounterVisual.PlayOpen();
 
     }
 
