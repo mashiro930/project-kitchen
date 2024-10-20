@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CheeseBlockSliced
   m_EditorClassIdentifier: 
   prefab: {fileID: 8925797874869151160, guid: a5507ca85a8652943be7c72fcae31db1, type: 3}
-  sprite: {fileID: 21300000, guid: 549cb4f2b86d1b84d8cd41c1cfde26c8, type: 3}
+  sprite: {fileID: 21300000, guid: 62229cb90c92fda418cc8f6db641dd5f, type: 3}
   objectName: "\u829D\u58EB\u7247"
+  positionOffset: {x: 0, y: 0, z: 0}

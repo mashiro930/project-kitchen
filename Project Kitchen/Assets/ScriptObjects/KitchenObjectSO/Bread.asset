@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Bread
   m_EditorClassIdentifier: 
   prefab: {fileID: 8925797874869151160, guid: 3a2b4dce486836f45842eaf3318edf13, type: 3}
-  sprite: {fileID: 21300000, guid: 77b28124b8bda494381c80bd5aa42c22, type: 3}
+  sprite: {fileID: 21300000, guid: c72b9eea7e290c243b14efed4940a179, type: 3}
   objectName: "\u9762\u5305"
+  positionOffset: {x: 0, y: 0, z: 0}
