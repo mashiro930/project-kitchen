@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class LoadBack : MonoBehaviour
 {
+    [SerializeField] private int delay = 6;
+
     // Start is called before the first frame update
     void Start()
     {
-        Loader.LoadBack();
+        StartCoroutine(DelayedLoadBack());
     }
 
+    private IEnumerator DelayedLoadBack()
+    {
+
+        yield return new WaitForSeconds(delay);
+
+        Loader.LoadBack();
+    }
 }
