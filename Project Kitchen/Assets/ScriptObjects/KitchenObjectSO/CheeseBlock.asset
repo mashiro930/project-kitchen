@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144b4996572481d4f9f992450ee33009, type: 3}
   m_Name: CheeseBlock
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8925797874869151160, guid: 6b44ecb43e9163b40a57b1b411726fb3, type: 3}
-  sprite: {fileID: 21300000, guid: da2d04fe27b94e34ea0b624569b48a6f, type: 3}
+  prefab: {fileID: 1010021998490315160, guid: cb42338a1602ed24cb901aa4fa4f663d, type: 3}
+  sprite: {fileID: 21300084, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
   objectName: "\u829D\u58EB\u5757"
+  positionOffset: {x: 0, y: 0.2, z: 0}

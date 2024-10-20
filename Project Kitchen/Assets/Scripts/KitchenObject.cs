@@ -11,4 +11,10 @@ public class KitchenObject : MonoBehaviour
         return kitchenObjectSO;
     }
 
+    public Vector3 GetPositionOffset()
+    {
+        return kitchenObjectSO.positionOffset;
+    }
+
+
 }

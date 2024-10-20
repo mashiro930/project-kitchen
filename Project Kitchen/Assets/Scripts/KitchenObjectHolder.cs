@@ -35,7 +35,7 @@ public class KitchenObjectHolder : MonoBehaviour
             OnPickup?.Invoke(this, EventArgs.Empty);
         }
         this.kitchenObject = kitchenObject;
-        kitchenObject.transform.localPosition = Vector3.zero;
+        //kitchenObject.transform.localPosition = Vector3.zero;
 
         
     }
@@ -62,6 +62,7 @@ public class KitchenObjectHolder : MonoBehaviour
     public void AddKitchenObject(KitchenObject kitchenObject)
     {
         kitchenObject.transform.SetParent(holdPoint);
+        kitchenObject.transform.localPosition = kitchenObject.GetPositionOffset();
         SetKitchenObject(kitchenObject);
     }
     

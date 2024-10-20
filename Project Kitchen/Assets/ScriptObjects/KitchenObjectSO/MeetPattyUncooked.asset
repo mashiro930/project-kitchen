@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144b4996572481d4f9f992450ee33009, type: 3}
   m_Name: MeetPattyUncooked
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8925797874869151160, guid: dce5dcd5f0734ab4eb4c47dd5aa93174, type: 3}
-  sprite: {fileID: 21300000, guid: aa1bacc24dde76e47b2ec0dd4e82385b, type: 3}
+  prefab: {fileID: 8851854174676815191, guid: bb749d305d0636447a4f333c5f954f82, type: 3}
+  sprite: {fileID: 21300106, guid: 37607ec1aab56e349af84a980f685a4b, type: 3}
   objectName: "\u751F\u8089"
+  positionOffset: {x: 0, y: 0.1, z: 0}
