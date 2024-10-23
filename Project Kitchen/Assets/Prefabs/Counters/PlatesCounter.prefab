@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdPoint: {fileID: 6961517643419958171}
   selectedCounter: {fileID: 3122559529835041101}
-  Plate: {fileID: 0}
+  Plate: {fileID: 11400000, guid: d767c588c6254c34ab555626f87ad53a, type: 2}
 --- !u!1001 &1505464922790262247
 PrefabInstance:
   m_ObjectHideFlags: 0

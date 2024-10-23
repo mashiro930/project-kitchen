@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144b4996572481d4f9f992450ee33009, type: 3}
+  m_Script: {fileID: 11500000, guid: 1336898230f13ff48a67d1d0dfe1d669, type: 3}
   m_Name: Drink
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8925797874869151160, guid: 69ab3d21027f447e29f31ad78f762d65, type: 3}
-  sprite: {fileID: 21300000, guid: 92b5a6e8edd43874e85cddca5c057127, type: 3}
-  objectName: "\u996E\u6599"
-  positionOffset: {x: 0, y: 0, z: 0}
+  recipleName: 'Drink '
+  kitchenObjectSOList:
+  - {fileID: 11400000, guid: feebb81e56820e947aa4d70cbd43ffbd, type: 2}
