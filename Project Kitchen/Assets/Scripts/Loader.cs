@@ -9,7 +9,9 @@ public static class Loader
     {
         GameMenuScene,
         LoadingScene,
-        GameScene
+        SelectScene,
+        Level1Scene,
+        Level2Scene
     }
 
     private static Scene targetScene;
