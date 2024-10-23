@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class FryingReceipeListSO : ScriptableObject 
+public class FryingReceipeListSO : ScriptableObject
 {
     public List<FryingReceipe> list;
 
