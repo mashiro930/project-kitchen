@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Project Kitchen/Assets/LowPolyFoodLite/LowPolyFoodLite_2020.3.0_HDRP_v1.0.unitypackage.meta
 guid: e8d1d59b4af53fb4685894e0972082fc
 DefaultImporter:
+========
+guid: 35a465f6fd4d449a188c5e5a436807aa
+PrefabImporter:
+>>>>>>>> 8cb6736b3a17fb1804d6157af86a5c2c9440cdc7:Project Kitchen/Assets/Prefabs/Counters/ContainerCounte_new.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
