@@ -60,11 +60,26 @@ public class Player : KitchenObjectHolder
 
         isWalking = direction != Vector3.zero;
 
-        transform.position += direction * Time.deltaTime * moveSpeed;
+        // Access the Rigidbody component
+        Rigidbody rb = GetComponent<Rigidbody>();
 
+        // If there is a direction input, rotate the player
         if (direction != Vector3.zero)
         {
+            // Move the player
+            transform.position += direction * Time.deltaTime * moveSpeed;
+
+            // Smoothly rotate the player towards the movement direction
             transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime * rotateSpeed);
+
+            // Update Rigidbody velocity
+            rb.velocity = direction * moveSpeed;
+        }
+        else
+        {
+            // Stop movement and rotation by setting velocity and angular velocity to zero
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
     }
 
