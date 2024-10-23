@@ -6642,7 +6642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeSOList: {fileID: 11400000, guid: e5a7dc40d57734df2977243533ec7bdc, type: 2}
-  orderMaxCount: 5
+  orderMaxCount: 20
+  maxActiveOrders: 5
   orderRate: 3
 --- !u!1 &957614902
 GameObject:
