@@ -24,7 +24,11 @@ public class OrderManager : MonoBehaviour
     private bool isStartOrder = false;
     private int orderCount = 0; // Total orders spawned
     private int activeOrderCount = 0; // Currently active orders
-    private int successDeliveryCount = 0;
+    public int successDeliveryCount = 0;
+    public GameObject Task1;
+    public GameObject Task2;
+    private Task task1;
+    private Task task2;
 
     public void Awake()
     {
@@ -34,6 +38,8 @@ public class OrderManager : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
+        task1 = Task1.GetComponent<Task>();
+        task2 = Task2.GetComponent<Task>();
     }
 
     private void GameManager_OnStateChanged(object sender, EventArgs e)
@@ -98,7 +104,10 @@ public class OrderManager : MonoBehaviour
         {
             orderRecipeSoList.Remove(correctRecipe);
             OnRecipeSuccessed?.Invoke(this, EventArgs.Empty);
-            successDeliveryCount++;
+            //successDeliveryCount++;
+            successDeliveryCount += correctRecipe.kitchenObjectSOList.Count;
+            successDeliveryCount += task1.checkMission(correctRecipe);
+            successDeliveryCount += task2.checkMission(correctRecipe);
             activeOrderCount--; // Reduce active orders after successful delivery
             print("Order Success");
 

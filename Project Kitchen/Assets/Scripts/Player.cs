@@ -6,8 +6,8 @@ public class Player : KitchenObjectHolder
 {
     public static Player Instance { get; private set; }
 
-    [SerializeField] private float moveSpeed = 7;
-    [SerializeField] private float rotateSpeed = 10;
+    [SerializeField] private float moveSpeed = 3;
+    [SerializeField] private float rotateSpeed = 8;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask counterLayerMask;
     public ParticleSystem dirtParticle;

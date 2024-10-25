@@ -7,6 +7,8 @@ public class GameOverUI : MonoBehaviour
 {
     [SerializeField] private GameObject uiParent;
     [SerializeField] private TextMeshProUGUI numberText;
+    [SerializeField] private TextMeshProUGUI result;
+    public int Score;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,13 @@ public class GameOverUI : MonoBehaviour
     private void Show()
     {
         numberText.text = OrderManager.Instance.GetSuccessDeliveryCount().ToString();
+        if (OrderManager.Instance.GetSuccessDeliveryCount() > Score)
+        {
+            result.text = "You Win!!";
+        }
+        else {
+            result.text = "You Lose:<";
+        }
         uiParent.SetActive(true);
     }
 
