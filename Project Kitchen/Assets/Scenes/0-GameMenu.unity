@@ -894,7 +894,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -920,13 +920,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.034843683, y: -0.96363723, z: 0.21326432, w: -0.15718639}
-  m_LocalPosition: {x: 1.5189106, y: 5.0032206, z: 3.4723644}
+  m_LocalRotation: {x: 0.039839163, y: 0.9562019, z: -0.15572736, w: 0.24462165}
+  m_LocalPosition: {x: 0.04, y: 3.22, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.5, y: 151.3, z: 0}
 --- !u!1001 &1024181689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1766,8 +1766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -446, y: 250}
-  m_SizeDelta: {x: 700, y: 450}
+  m_AnchoredPosition: {x: -396.57, y: 250}
+  m_SizeDelta: {x: 1200, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862981214
 MonoBehaviour:
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d114a31b8232418293752ac46d6bb20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28ca228066c1e674fbebe133e8435fc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
