@@ -29,10 +29,17 @@ public class Task : MonoBehaviour
             textMesh.text = current + "/" + number + " (+" + extraScore +")";
             if (current == number) { 
                 finish = true;
-                gameObject.SetActive(false);
+                SetTextAlpha(0.5f);
+                //gameObject.SetActive(false);
                 return extraScore;
             }
         }
         return 0;
+    }
+    public void SetTextAlpha(float alpha)
+    {
+        Color color = textMesh.color;
+        color.a = Mathf.Clamp01(alpha); // 确保alpha值在0到1之间
+        textMesh.color = color;
     }
 }

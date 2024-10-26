@@ -105,7 +105,21 @@ public class OrderManager : MonoBehaviour
             orderRecipeSoList.Remove(correctRecipe);
             OnRecipeSuccessed?.Invoke(this, EventArgs.Empty);
             //successDeliveryCount++;
-            successDeliveryCount += correctRecipe.kitchenObjectSOList.Count;
+            if (correctRecipe.kitchenObjectSOList.Count >= 5)
+            {
+                if (correctRecipe.kitchenObjectSOList.Count >= 7)
+                {
+                    successDeliveryCount += correctRecipe.kitchenObjectSOList.Count + 2;
+                }
+                else {
+                    successDeliveryCount += correctRecipe.kitchenObjectSOList.Count + 1;
+                }
+            }
+            else
+            {
+                successDeliveryCount += correctRecipe.kitchenObjectSOList.Count;
+            }
+            
             successDeliveryCount += task1.checkMission(correctRecipe);
             successDeliveryCount += task2.checkMission(correctRecipe);
             activeOrderCount--; // Reduce active orders after successful delivery
