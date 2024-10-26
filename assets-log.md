@@ -19,7 +19,7 @@
 [Low Poly Food Lite](https://assetstore.unity.com/packages/3d/props/food/low-poly-food-lite-258693)
 
 ## Wall and Floor
-[25+ Free Stylized Textures - Grass, Ground, Floors, Walls & More](https://assetstore.unity.com/publishers/18386
+[25+ Free Stylized Textures - Grass, Ground, Floors, Walls & More](https://assetstore.unity.com/packages/2d/textures-materials/25-free-stylized-textures-grass-ground-floors-walls-more-241895)
 
 ## Stars and Button
 [Cute Cartoon Mobile GUI - 97 png files!](https://assetstore.unity.com/packages/2d/gui/cute-cartoon-mobile-gui-97-png-files-35315)
