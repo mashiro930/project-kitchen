@@ -378,6 +378,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa8d8f2e35a00244d905f70574827c58, type: 2}
   - {fileID: 11400000, guid: feebb81e56820e947aa4d70cbd43ffbd, type: 2}
   - {fileID: 11400000, guid: d545df0c86b21f94c945426310cbb25f, type: 2}
+  - {fileID: 11400000, guid: 37be27a39d1d94cba8b6402212d9c260, type: 2}
+  - {fileID: 11400000, guid: ae2a23307169340e788837a97adc0658, type: 2}
   gridUI: {fileID: 3815358180153487668}
 --- !u!1001 &2521336997475393090
 PrefabInstance:

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0ebec01ce35f4ab6bf5c6c9a4f79856, type: 3}
-  m_Name: BurningReceipeList
+  m_Script: {fileID: 11500000, guid: 1336898230f13ff48a67d1d0dfe1d669, type: 3}
+  m_Name: IceCream
   m_EditorClassIdentifier: 
-  list:
-  - input: {fileID: 11400000, guid: 5b169d72d99be2243ab5fa3aa6831524, type: 2}
-    output: {fileID: 11400000, guid: 41d2d01b6dc036941bbabd2b8377c9c6, type: 2}
-    fryingTimne: 4
+  recipleName: Ice Cream
+  kitchenObjectSOList:
+  - {fileID: 11400000, guid: ae2a23307169340e788837a97adc0658, type: 2}

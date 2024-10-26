@@ -15,4 +15,4 @@ MonoBehaviour:
   list:
   - input: {fileID: 11400000, guid: 0b7b3aeafb728034b99f9c9b60603e07, type: 2}
     output: {fileID: 11400000, guid: 5b169d72d99be2243ab5fa3aa6831524, type: 2}
-    fryingTimne: 2
+    fryingTimne: 6
