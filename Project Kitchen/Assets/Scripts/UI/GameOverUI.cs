@@ -16,12 +16,35 @@ public class GameOverUI : MonoBehaviour
     public int Score;
     public int Score2;
     public int Score3;
+    [SerializeField] private Button menuButton;
+    [SerializeField] private Button levelButton;
+    [SerializeField] private Button restartButton;
+    public int level;
 
     // Start is called before the first frame update
     void Start()
     {
         Hide();
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
+        menuButton.onClick.AddListener(() =>
+        {
+            Loader.Load(Loader.Scene.GameMenuScene);
+        });
+        levelButton.onClick.AddListener(() =>
+        {
+            Loader.Load(Loader.Scene.SelectScene);
+        });
+        restartButton.onClick.AddListener(() =>
+        {
+            if (level == 1)
+            {
+                Loader.Load(Loader.Scene.Level1Scene);
+            }
+            else {
+                Loader.Load(Loader.Scene.Level2Scene);
+            }
+        
+        });
     }
 
     private void GameManager_OnStateChanged(object sender, System.EventArgs e)
