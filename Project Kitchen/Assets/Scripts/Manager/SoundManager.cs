@@ -64,12 +64,12 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(audioClipRefsSO.warning);
     }
-    public void PlayStepSound(float volumeMutipler = .1f)
+    public void PlayStepSound(float volumeMutipler = 1.0f)
     {
         PlaySound(audioClipRefsSO.footstep, volumeMutipler);
     }
 
-    private void PlaySound(AudioClip[] clips, float volumeMutipler = .1f)
+    private void PlaySound(AudioClip[] clips, float volumeMutipler = .5f)
     {
         PlaySound(clips, Camera.main.transform.position, volumeMutipler);
     }
