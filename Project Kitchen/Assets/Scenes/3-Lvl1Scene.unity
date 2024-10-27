@@ -3527,7 +3527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -119}
+  m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349408471
@@ -4252,6 +4252,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContainerCounter_Bread
       objectReference: {fileID: 0}
+    - target: {fileID: 2614600201366620158, guid: a754a5eff4a39c94d9952ea4e01296ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3048996417549720065, guid: a754a5eff4a39c94d9952ea4e01296ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4262,6 +4267,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3853488146174757378, guid: a754a5eff4a39c94d9952ea4e01296ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5936855597873061966, guid: a754a5eff4a39c94d9952ea4e01296ba,
         type: 3}
       propertyPath: selectedCounter
@@ -4270,7 +4280,7 @@ PrefabInstance:
     - target: {fileID: 8526525964649671279, guid: a754a5eff4a39c94d9952ea4e01296ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8526525964649671279, guid: a754a5eff4a39c94d9952ea4e01296ba,
         type: 3}
@@ -5154,6 +5164,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1222111968}
     m_Modifications:
+    - target: {fileID: 1631073945369619858, guid: 260d46639564747c9bf1cb6dde15eb94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2614600201366620158, guid: 260d46639564747c9bf1cb6dde15eb94,
         type: 3}
       propertyPath: m_Name
@@ -5210,7 +5225,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3853488146174757378, guid: 260d46639564747c9bf1cb6dde15eb94, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260d46639564747c9bf1cb6dde15eb94, type: 3}
@@ -5300,6 +5316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClearCounter (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064733633169097833, guid: 8afa9b15521238144932e8c238f4fb55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6692199055476260689, guid: 8afa9b15521238144932e8c238f4fb55,
         type: 3}
@@ -7155,7 +7176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -63.7}
+  m_AnchoredPosition: {x: 0, y: -72}
   m_SizeDelta: {x: 598.5797, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825896720
@@ -8632,7 +8653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953124517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10615,6 +10636,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: d767c588c6254c34ab555626f87ad53a,
         type: 2}
+    - target: {fileID: 3122559529835041101, guid: a0455a19841302e49a2cf5a1e3d915ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5807833381888650273, guid: a0455a19841302e49a2cf5a1e3d915ae,
         type: 3}
       propertyPath: m_Name
@@ -10675,6 +10701,7 @@ Transform:
   - {fileID: 2021611501}
   - {fileID: 1366096483}
   - {fileID: 400052279}
+  - {fileID: 439526487}
   - {fileID: 408793563}
   - {fileID: 1953231556}
   - {fileID: 76509081}
@@ -10693,7 +10720,6 @@ Transform:
   - {fileID: 677747600}
   - {fileID: 772247292}
   - {fileID: 601114769}
-  - {fileID: 439526487}
   - {fileID: 1385431473}
   - {fileID: 898455886}
   m_Father: {fileID: 0}
@@ -12526,6 +12552,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1222111968}
     m_Modifications:
+    - target: {fileID: 1631073945369619858, guid: f68557374063148a891d058cf1d95e63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2614600201366620158, guid: f68557374063148a891d058cf1d95e63,
         type: 3}
       propertyPath: m_Name
@@ -12582,7 +12613,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3853488146174757378, guid: f68557374063148a891d058cf1d95e63, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68557374063148a891d058cf1d95e63, type: 3}
@@ -17188,6 +17220,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContainerCounter_Cabbage
       objectReference: {fileID: 0}
+    - target: {fileID: 1606530286249509727, guid: fc319a0ed4fecf24484c401b6605b358,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038661912409135719, guid: fc319a0ed4fecf24484c401b6605b358,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6153487148515681074, guid: fc319a0ed4fecf24484c401b6605b358,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17239,7 +17281,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1606530286249509727, guid: fc319a0ed4fecf24484c401b6605b358, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc319a0ed4fecf24484c401b6605b358, type: 3}
@@ -17306,8 +17349,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContainerCounter_CheeseBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 6033958395311190556, guid: c7dca624a972752448a74d11d709cd8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6033958395311190556, guid: c7dca624a972752448a74d11d709cd8c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7dca624a972752448a74d11d709cd8c, type: 3}
@@ -17319,10 +17368,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1222111968}
     m_Modifications:
+    - target: {fileID: 2481835086984306740, guid: ade9536eda7c6834b9f1962018591a8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3693943273883135432, guid: ade9536eda7c6834b9f1962018591a8c,
         type: 3}
       propertyPath: m_Name
       value: ContainerCounter_MeetPattyUncooked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935485438594723120, guid: ade9536eda7c6834b9f1962018591a8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7016369495081386073, guid: ade9536eda7c6834b9f1962018591a8c,
         type: 3}
@@ -17375,7 +17434,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2481835086984306740, guid: ade9536eda7c6834b9f1962018591a8c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ade9536eda7c6834b9f1962018591a8c, type: 3}
@@ -17391,6 +17451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ContainerCounter_Tomato
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853488146174757378, guid: f12a9d0c398e3a24eb227bab0cb583e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8526525964649671279, guid: f12a9d0c398e3a24eb227bab0cb583e7,
         type: 3}
@@ -17443,7 +17508,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3853488146174757378, guid: f12a9d0c398e3a24eb227bab0cb583e7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f12a9d0c398e3a24eb227bab0cb583e7, type: 3}
