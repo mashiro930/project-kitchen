@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11667,6 +11667,7 @@ MonoBehaviour:
   levelButton: {fileID: 388689208}
   restartButton: {fileID: 1023944811}
   level: 2
+  currentLevel: 2
 --- !u!1 &1386560904
 GameObject:
   m_ObjectHideFlags: 0
@@ -15771,11 +15772,6 @@ PrefabInstance:
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 1936651086}
-    - target: {fileID: 347490624136840073, guid: 01938cb3f0b2a8e449de821458b622ca,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1185194119043465061, guid: 01938cb3f0b2a8e449de821458b622ca,
         type: 3}
       propertyPath: m_Name

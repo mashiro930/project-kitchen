@@ -21,6 +21,7 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private Button levelButton;
     [SerializeField] private Button restartButton;
     public int level;
+    [SerializeField] private int currentLevel;
 
     private Vector3 originalMenuScale;
     private Vector3 originalLevelScale;
@@ -36,7 +37,7 @@ public class GameOverUI : MonoBehaviour
         originalLevelScale = levelButton.transform.localScale;
         originalRestartScale = restartButton.transform.localScale;
 
-        // Îª°´Å¥Ìí¼Óµã»÷ÊÂ¼þºÍÐü¸¡Ð§¹û
+        // Îªï¿½ï¿½Å¥ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
         AddButtonEffects(menuButton, originalMenuScale, Loader.Scene.GameMenuScene);
         AddButtonEffects(levelButton, originalLevelScale, Loader.Scene.SelectScene);
         AddButtonEffects(restartButton, originalRestartScale);
@@ -74,16 +75,29 @@ public class GameOverUI : MonoBehaviour
                 {
                     star3.gameObject.SetActive(true);
                     nextLevel.text = "Perfect Pass!";
+                    if (GameState.GetStarNumber(currentLevel) < 3)
+                    {
+                        GameState.SetStarNumber(currentLevel, 3);
+                    }
                 }
                 else
                 {
                     star2.gameObject.SetActive(true);
-                    nextLevel.text = "Need "+ (Score3-OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                    nextLevel.text = "Need " + (Score3 - OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                    if (GameState.GetStarNumber(currentLevel) < 2)
+                    {
+                        GameState.SetStarNumber(currentLevel, 2);
+                    }
                 }
             }
-            else {
+            else
+            {
                 star1.gameObject.SetActive(true);
                 nextLevel.text = "Need " + (Score2 - OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                if (GameState.GetStarNumber(currentLevel) < 1)
+                {
+                    GameState.SetStarNumber(currentLevel, 1);
+                }
             }
         }
         else {
@@ -97,10 +111,10 @@ public class GameOverUI : MonoBehaviour
         uiParent.SetActive(false);
     }
 
-    // Îª°´Å¥Ìí¼Óµã»÷¡¢Ðü¸¡Ð§¹û
+    // Îªï¿½ï¿½Å¥ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
     private void AddButtonEffects(Button button, Vector3 originalScale, Loader.Scene? scene = null)
     {
-        // Ìí¼ÓÐü¸¡½øÈëÊÂ¼þ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         EventTrigger trigger = button.gameObject.AddComponent<EventTrigger>();
 
         EventTrigger.Entry entryEnter = new EventTrigger.Entry();
@@ -108,18 +122,18 @@ public class GameOverUI : MonoBehaviour
         entryEnter.callback.AddListener((data) => { OnPointerEnter(button, originalScale); });
         trigger.triggers.Add(entryEnter);
 
-        // Ìí¼ÓÐü¸¡Àë¿ªÊÂ¼þ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªï¿½Â¼ï¿½
         EventTrigger.Entry entryExit = new EventTrigger.Entry();
         entryExit.eventID = EventTriggerType.PointerExit;
         entryExit.callback.AddListener((data) => { OnPointerExit(button, originalScale); });
         trigger.triggers.Add(entryExit);
 
-        // Ìí¼Óµã»÷ËõÐ¡Ð§¹û
+        // ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ð¡Ð§ï¿½ï¿½
         button.onClick.AddListener(() =>
         {
             ButtonPressEffect(button, originalScale);
 
-            // Èç¹ûÐèÒª¼ÓÔØ³¡¾°
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½
             if (scene != null)
             {
                 Loader.Load(scene.Value);
@@ -127,25 +141,25 @@ public class GameOverUI : MonoBehaviour
         });
     }
 
-    // Êó±êÐü¸¡Ê±·Å´ó°´Å¥
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Å´ï¿½Å¥
     private void OnPointerEnter(Button button, Vector3 originalScale)
     {
-        button.transform.localScale = originalScale * 1.1f;  // ·Å´óÖÁ1.1±¶
+        button.transform.localScale = originalScale * 1.1f;  // ï¿½Å´ï¿½ï¿½ï¿½1.1ï¿½ï¿½
     }
 
-    // Êó±êÀë¿ªÊ±»Ö¸´Ô­Ê¼´óÐ¡
+    // ï¿½ï¿½ï¿½ï¿½ë¿ªÊ±ï¿½Ö¸ï¿½Ô­Ê¼ï¿½ï¿½Ð¡
     private void OnPointerExit(Button button, Vector3 originalScale)
     {
-        button.transform.localScale = originalScale;  // »Ö¸´Ô­Ê¼´óÐ¡
+        button.transform.localScale = originalScale;  // ï¿½Ö¸ï¿½Ô­Ê¼ï¿½ï¿½Ð¡
     }
 
-    // µã»÷°´Å¥Ê±ËõÐ¡Ð§¹û
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Å¥Ê±ï¿½ï¿½Ð¡Ð§ï¿½ï¿½
     private void ButtonPressEffect(Button button, Vector3 originalScale)
     {
-        button.transform.localScale = originalScale * 0.9f; // µã»÷Ê±ËõÐ¡µ½90%
+        button.transform.localScale = originalScale * 0.9f; // ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ð¡ï¿½ï¿½90%
     }
 
-    // Æ½»¬Ëõ·Å°´Å¥
+    // Æ½ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½Å¥
     private IEnumerator ScaleButton(Button button, Vector3 targetScale)
     {
         Transform buttonTransform = button.transform;
@@ -162,4 +176,5 @@ public class GameOverUI : MonoBehaviour
 
         buttonTransform.localScale = targetScale;
     }
+
 }
