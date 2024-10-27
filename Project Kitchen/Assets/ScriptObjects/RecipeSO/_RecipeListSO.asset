@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: _RecipeListSO
   m_EditorClassIdentifier: 
   recipeSOList:
-  - {fileID: 11400000, guid: 7cc2a7c40367247a09b1c1e395eba662, type: 2}
-  - {fileID: 11400000, guid: 70369593a367243348b5e437a8fc0510, type: 2}
+  - {fileID: 11400000, guid: 31fc2a263fe3f4dd882b65f46854b28c, type: 2}
   - {fileID: 11400000, guid: 001c17f5cadc445508912b7381ddefcf, type: 2}
+  - {fileID: 11400000, guid: 0a13f9226c0634a78a67df588341c7d9, type: 2}
+  - {fileID: 11400000, guid: 6b938c38bab4646fe8ff63cdee8d68f3, type: 2}
+  - {fileID: 11400000, guid: 7cc2a7c40367247a09b1c1e395eba662, type: 2}
+  - {fileID: 11400000, guid: c90ca33bedf1d4442b3cd0681c7ebe45, type: 2}
+  - {fileID: 11400000, guid: 8fdf9d936f348491583cf6eb46cb2142, type: 2}
+  - {fileID: 11400000, guid: 7cc2a7c40367247a09b1c1e395eba662, type: 2}
   - {fileID: 11400000, guid: 215a2dd9a9fc64336adfd1b24f50db3b, type: 2}
+  - {fileID: 11400000, guid: 9094d80c1f9374d14b9301e4598297fd, type: 2}
