@@ -20,6 +20,7 @@ public class GameOverUI : MonoBehaviour
     [SerializeField] private Button levelButton;
     [SerializeField] private Button restartButton;
     public int level;
+    [SerializeField] private int currentLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -67,16 +68,29 @@ public class GameOverUI : MonoBehaviour
                 {
                     star3.gameObject.SetActive(true);
                     nextLevel.text = "Perfect Pass!";
+                    if (GameState.GetStarNumber(currentLevel) < 3)
+                    {
+                        GameState.SetStarNumber(currentLevel, 3);
+                    }
                 }
                 else
                 {
                     star2.gameObject.SetActive(true);
-                    nextLevel.text = "Need "+ (Score3-OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                    nextLevel.text = "Need " + (Score3 - OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                    if (GameState.GetStarNumber(currentLevel) < 2)
+                    {
+                        GameState.SetStarNumber(currentLevel, 2);
+                    }
                 }
             }
-            else {
+            else
+            {
                 star1.gameObject.SetActive(true);
                 nextLevel.text = "Need " + (Score2 - OrderManager.Instance.GetSuccessDeliveryCount()) + " Score to get Next Star";
+                if (GameState.GetStarNumber(currentLevel) < 1)
+                {
+                    GameState.SetStarNumber(currentLevel, 1);
+                }
             }
         }
         else {
@@ -89,4 +103,6 @@ public class GameOverUI : MonoBehaviour
     {
         uiParent.SetActive(false);
     }
+
+
 }
