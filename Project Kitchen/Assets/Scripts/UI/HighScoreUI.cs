@@ -11,7 +11,7 @@ public class ScoreUI1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score01.SetText(GameState.GetStarNumber01().ToString());
-        score02.SetText(GameState.GetStarNumber02().ToString());
+        score01.SetText("Highest Score: " + GameState.GetStarNumber01().ToString());
+        score02.SetText("Highest Score: " + GameState.GetStarNumber02().ToString());
     }
 }
