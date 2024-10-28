@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2986,9 +2986,9 @@ MonoBehaviour:
   star1: {fileID: 1953603340}
   star2: {fileID: 465652549}
   star3: {fileID: 678168046}
-  Score: 15
-  Score2: 20
-  Score3: 25
+  Score: 30
+  Score2: 35
+  Score3: 40
   menuButton: {fileID: 1119608947}
   levelButton: {fileID: 1010694775}
   restartButton: {fileID: 867398525}
@@ -10575,14 +10575,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7580790531b41324bbad223fc6964393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 2
+  number: 3
   current: 0
   orderRecipeSoList:
   - {fileID: 11400000, guid: 215a2dd9a9fc64336adfd1b24f50db3b, type: 2}
   textMesh: {fileID: 1954864931}
   orderManager: {fileID: 848899470}
   orderManagerS: {fileID: 0}
-  extraScore: 3
+  extraScore: 4
   finish: 0
 --- !u!1 &1189334097
 GameObject:
@@ -11440,7 +11440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7580790531b41324bbad223fc6964393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 2
+  number: 4
   current: 0
   orderRecipeSoList:
   - {fileID: 11400000, guid: 001c17f5cadc445508912b7381ddefcf, type: 2}
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   textMesh: {fileID: 942013486}
   orderManager: {fileID: 848899470}
   orderManagerS: {fileID: 0}
-  extraScore: 3
+  extraScore: 5
   finish: 0
 --- !u!1 &1299172026
 GameObject:
@@ -16535,7 +16535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Goal Score: 15'
+  m_text: 'Goal Score: 30'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91271f6a9b1b77648af795d508a2ca48, type: 2}
   m_sharedMaterial: {fileID: -1824977311398830968, guid: 91271f6a9b1b77648af795d508a2ca48,
@@ -17684,6 +17684,11 @@ PrefabInstance:
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 1255941535}
+    - target: {fileID: 347490624136840073, guid: 01938cb3f0b2a8e449de821458b622ca,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1185194119043465061, guid: 01938cb3f0b2a8e449de821458b622ca,
         type: 3}
       propertyPath: m_Name
