@@ -11362,9 +11362,9 @@ MonoBehaviour:
   star1: {fileID: 1938607776}
   star2: {fileID: 2084023879}
   star3: {fileID: 1755190250}
-  Score: 45
-  Score2: 50
-  Score3: 55
+  Score: 30
+  Score2: 35
+  Score3: 40
   menuButton: {fileID: 1281915800}
   levelButton: {fileID: 1633081349}
   restartButton: {fileID: 1619465453}
@@ -13194,7 +13194,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 001c17f5cadc445508912b7381ddefcf, type: 2}
   - {fileID: 11400000, guid: 7cc2a7c40367247a09b1c1e395eba662, type: 2}
   textMesh: {fileID: 2138315368}
-  orderManager: {fileID: 0}
+  orderManager: {fileID: 948543566}
   orderManagerS: {fileID: 0}
   extraScore: 5
   finish: 0
@@ -15620,7 +15620,7 @@ PrefabInstance:
     - target: {fileID: 347490624136840073, guid: 01938cb3f0b2a8e449de821458b622ca,
         type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1185194119043465061, guid: 01938cb3f0b2a8e449de821458b622ca,
         type: 3}
@@ -16544,7 +16544,7 @@ MonoBehaviour:
   orderRecipeSoList:
   - {fileID: 11400000, guid: 215a2dd9a9fc64336adfd1b24f50db3b, type: 2}
   textMesh: {fileID: 235632312}
-  orderManager: {fileID: 0}
+  orderManager: {fileID: 948543566}
   orderManagerS: {fileID: 0}
   extraScore: 4
   finish: 0
