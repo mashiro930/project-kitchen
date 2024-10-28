@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdPoint: {fileID: 8100244403298480456}
-  moveSpeed: 5
+  moveSpeed: 4
   rotateSpeed: 8
   gameInput: {fileID: 0}
   counterLayerMask:

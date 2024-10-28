@@ -17608,11 +17608,6 @@ PrefabInstance:
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 1255941535}
-    - target: {fileID: 347490624136840073, guid: 01938cb3f0b2a8e449de821458b622ca,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1185194119043465061, guid: 01938cb3f0b2a8e449de821458b622ca,
         type: 3}
       propertyPath: m_Name
