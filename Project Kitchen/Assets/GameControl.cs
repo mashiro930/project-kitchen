@@ -200,7 +200,7 @@ public partial class @GameControl: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e179d387-6392-446d-acfd-a4faea6ade52"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
