@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class KitchenObject : MonoBehaviour
 {
-    [SerializeField]private KitchenObjectSO kitchenObjectSO;
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
     public KitchenObjectSO GetKitchenObjectSO()
     {
         return kitchenObjectSO;
     }
+
+    public Vector3 GetPositionOffset()
+    {
+        return kitchenObjectSO.positionOffset;
+    }
+
 
 }

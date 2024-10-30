@@ -5,39 +5,66 @@ using UnityEngine.UI;
 
 public class ClearCounter : BaseCounter
 {
-    
+
 
 
     public override void Interact(Player player)
     {
-        if (player.isHaveKitchenObject())
+        if (player.IsHaveKitchenObject())
         {
-            if (isHaveKitchenObject()== false)
+            if (player.GetKitchenObject().CompareTag("Plate"))
             {
-                TransferKitchenObject(player,this);
-            } else 
+                if (IsHaveKitchenObject() == false)
+                {
+                    TransferKitchenObject(player, this);
+                }
+                else
+                {
+                    PlateKitchenObject plateKitchenObject = player.GetKitchenObject().GetComponent<PlateKitchenObject>();
+                    if (plateKitchenObject.AddKitchenObjectSO(GetKitchenObjectSO())) {
+                        DestroyKitchenObject();  
+                    }
+                    
+                }
+            }
+            else {
+                if (IsHaveKitchenObject() == false)
+                {
+                    TransferKitchenObject(player, this);
+                }
+                else
+                {
+                    if (GetKitchenObject().CompareTag("Plate")) {
+                        PlateKitchenObject plateKitchenObject = GetKitchenObject().GetComponent<PlateKitchenObject>();
+                        if (plateKitchenObject.AddKitchenObjectSO(player.GetKitchenObjectSO()))
+                        {
+                            player.DestroyKitchenObject();
+                        }
+                    }
+                }
+            }
+            
+        }
+        else
+        {
+            if (IsHaveKitchenObject() == false)
             {
 
             }
-        } else 
-        {
-            if (isHaveKitchenObject() == false)
+            else
             {
-
-            } else 
-            {
-                TransferKitchenObject(this,player);
+                TransferKitchenObject(this, player);
 
             }
         }
-        
-        
+
+
     }
 
 
 
-    
 
-    
+
+
 
 }

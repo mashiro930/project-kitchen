@@ -8,7 +8,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private Animator anim;
 
-    [SerializeField] private Player player;
+    [SerializeField]private Player player;
 
     // Start is called before the first frame update
     void Start()
